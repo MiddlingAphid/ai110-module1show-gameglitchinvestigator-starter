@@ -26,12 +26,22 @@ It wrote the code, ran away, and now the game is unplayable.
 ## 📝 Document Your Experience
 
 - [ ] Describe the game's purpose.
+
+The "Number Guessing Game" is a Streamlit-based application where players try to identify a hidden number within a set range. It tracks the player's accuracy and speed, calculating a final score based on how many attempts it takes to find the correct answer.
+
 - [ ] Detail which bugs you found.
+
+The most critical bug was that the high/low hints were completely reversed, making it impossible to follow the game's feedback. I also discovered that "Hard" mode was accidentally easier than "Normal" mode and that the scoring system gave out free points for incorrect guesses.
+
 - [ ] Explain what fixes you applied.
+
+I refactored the entire project to move the game rules into a separate logic_utils.py file for better organization. I then corrected the hint logic, expanded the "Hard" range to 1-500, and used pytest to verify that all scoring exploits were fully removed.
 
 ## 📸 Demo
 
 - [ ] [Insert a screenshot of your fixed, winning game here]
+
+![Game Screenshot](WinningGameScreenshot.png)
 
 ## 🚀 Stretch Features
 
